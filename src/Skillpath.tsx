@@ -277,8 +277,8 @@ export function Skillpath({
         </a>
         <nav className="skillpath-nav-links">
           <a href="#courses-section" className="skillpath-nav-link active">Courses</a>
-          <a href="#" className="skillpath-nav-link">About</a>
-          <a href="#" className="skillpath-nav-link">Contact</a>
+          <a href="#about-section" className="skillpath-nav-link">About</a>
+          <a href="#contact-section" className="skillpath-nav-link">Contact</a>
         </nav>
       </header>
 
@@ -479,6 +479,88 @@ export function Skillpath({
         )}
       </main>
 
+      {/* About Section (Archival Manifesto) */}
+      <section id="about-section" className="skillpath-archival-section">
+        <div className="skillpath-section-header">
+          <div className="skillpath-section-stamp">ARCHIVAL MANIFESTO // RECORD #001</div>
+          <h2 className="skillpath-section-title">Built for real-world execution.</h2>
+          <p className="skillpath-section-subtitle">
+            Skillpath is a physical-curriculum index designed to bridge the gap between abstract theory and production execution. Every course syllabus is authored by active industry practitioners.
+          </p>
+        </div>
+
+        <div className="skillpath-about-grid">
+          <div className="skillpath-about-card">
+            <span className="skillpath-about-card-stamp">PRINCIPLE #01</span>
+            <h3 className="skillpath-about-card-title">Project-Based Syllabi</h3>
+            <p className="skillpath-about-card-text">
+              Learn through real systems, concrete code artifacts, design tokens, and production workflows.
+            </p>
+          </div>
+
+          <div className="skillpath-about-card">
+            <span className="skillpath-about-card-stamp">PRINCIPLE #02</span>
+            <h3 className="skillpath-about-card-title">Practitioner Led</h3>
+            <p className="skillpath-about-card-text">
+              Authored exclusively by engineers, founders, and product designers actively operating in industry.
+            </p>
+          </div>
+
+          <div className="skillpath-about-card">
+            <span className="skillpath-about-card-stamp">PRINCIPLE #03</span>
+            <h3 className="skillpath-about-card-title">Transparent Pricing</h3>
+            <p className="skillpath-about-card-text">
+              Independent regional currency detection ensuring clear, upfront pricing with zero hidden fees.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section (Inquiry Desk Ticket Form) */}
+      <section id="contact-section" className="skillpath-archival-section">
+        <div className="skillpath-section-header">
+          <div className="skillpath-section-stamp">INQUIRY DESK // TICKET OFFICE #04</div>
+          <h2 className="skillpath-section-title">Get in touch with the registrar.</h2>
+          <p className="skillpath-section-subtitle">
+            Have questions regarding course syllabi, regional pricing, or curriculum customization? Submit an inquiry ticket below.
+          </p>
+        </div>
+
+        <div className="skillpath-contact-container">
+          <form className="skillpath-contact-form" onSubmit={(e) => { e.preventDefault(); alert("Inquiry Ticket #2026-INQ submitted successfully!"); }}>
+            <div className="skillpath-form-row">
+              <div className="skillpath-form-group">
+                <label className="skillpath-form-label" htmlFor="contact-name">FULL NAME</label>
+                <input id="contact-name" type="text" className="skillpath-form-input" placeholder="e.g. Alex Morgan" required />
+              </div>
+              <div className="skillpath-form-group">
+                <label className="skillpath-form-label" htmlFor="contact-email">EMAIL ADDRESS</label>
+                <input id="contact-email" type="email" className="skillpath-form-input" placeholder="alex@example.com" required />
+              </div>
+            </div>
+
+            <div className="skillpath-form-group">
+              <label className="skillpath-form-label" htmlFor="contact-subject">INQUIRY TOPIC</label>
+              <select id="contact-subject" className="skillpath-form-select">
+                <option value="curriculum">Course Curriculum Guidance</option>
+                <option value="pricing">Regional Pricing & Payment</option>
+                <option value="enterprise">Enterprise Team Access</option>
+                <option value="other">General Archival Inquiry</option>
+              </select>
+            </div>
+
+            <div className="skillpath-form-group">
+              <label className="skillpath-form-label" htmlFor="contact-message">INQUIRY DETAILS</label>
+              <textarea id="contact-message" className="skillpath-form-textarea" rows={4} placeholder="Write your question or request here..." required />
+            </div>
+
+            <button type="submit" className="skillpath-form-submit-btn">
+              Submit Inquiry Ticket <span className="skillpath-form-btn-stub">TICKET #2026</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
       {/* Archival Closing Footer */}
       <footer className="skillpath-footer">
         <div className="skillpath-footer-stub-card">
@@ -507,10 +589,10 @@ export function Skillpath({
                 <a href="#courses-section" className="skillpath-footer-link">
                   <span className="skillpath-footer-link-prefix">→</span> Courses
                 </a>
-                <a href="#" className="skillpath-footer-link">
+                <a href="#about-section" className="skillpath-footer-link">
                   <span className="skillpath-footer-link-prefix">→</span> About
                 </a>
-                <a href="#" className="skillpath-footer-link">
+                <a href="#contact-section" className="skillpath-footer-link">
                   <span className="skillpath-footer-link-prefix">→</span> Contact
                 </a>
               </nav>
